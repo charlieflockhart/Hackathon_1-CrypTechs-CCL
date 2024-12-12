@@ -2,6 +2,11 @@ export const testDictionary = [
     "TESTS",
 ]
 
+export const testDictionary2 = [
+    "TESTS",
+    "EARTH",
+]
+
 export const christmasDictionary = [
     "Angel",
     "Bells",
