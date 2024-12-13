@@ -8,7 +8,7 @@ console.log('Theme:', theme);
 console.log('Difficulty:', difficulty);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Dictionary Import
-import { testDictionary, testDictionary2 ,christmasDictionary, movieDictionary, foodDictionary, technologyDictionary, geographyDictionary } from './dictionary.js';
+import { testDictionary, testDictionary2, christmasDictionary, movieDictionary, foodDictionary, technologyDictionary, geographyDictionary } from './dictionary.js';
 console.log('test dictionary:', testDictionary);
 console.log('test dictionary2:', testDictionary2);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -59,12 +59,12 @@ if (difficulty === 'hard') {
 
 const dictionary = testDictionary2;
 const state = {
-  secret: dictionary[Math.floor(Math.random() * dictionary.length)],
-  grid: Array(difficulty === 'easy' ? 6 : 5)
-    .fill()
-    .map(() => Array(5).fill('')),
-  currentRow: 0,
-  currentCol: 0,
+    secret: dictionary[Math.floor(Math.random() * dictionary.length)],
+    grid: Array(difficulty === 'easy' ? 6 : 5)
+        .fill()
+        .map(() => Array(5).fill('')),
+    currentRow: 0,
+    currentCol: 0,
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -72,9 +72,9 @@ const state = {
 
 function drawGrid(container) {
     if (difficulty === 'easy') {
-      easyGrid(container);
+        easyGrid(container);
     } else {
-      hardGrid(container);
+        hardGrid(container);
     }
 }
 
@@ -85,13 +85,14 @@ function drawGrid(container) {
 function easyGrid(container) {
     const grid = document.createElement('div');
     grid.className = 'grid';
-  
+    grid.id = 'grid';
+
     for (let i = 0; i < 6; i++) {
-      for (let j = 0; j < 5; j++) {
-        drawBox(grid, i, j);
-      }
+        for (let j = 0; j < 5; j++) {
+            drawBox(grid, i, j);
+        }
     }
-  
+
     container.appendChild(grid);
     console.log('Easy Grid Created');
 }
@@ -100,13 +101,14 @@ function easyGrid(container) {
 function hardGrid(container) {
     const grid = document.createElement('div');
     grid.className = 'grid';
-  
+    grid.id = 'grid';
+
     for (let i = 0; i < 5; i++) {
-      for (let j = 0; j < 5; j++) {
-        drawBox(grid, i, j);
-      }
+        for (let j = 0; j < 5; j++) {
+            drawBox(grid, i, j);
+        }
     }
-  
+
     container.appendChild(grid);
     console.log('Hard Grid Created');
 }
@@ -120,10 +122,10 @@ function hardGrid(container) {
  */
 function updateGrid() {
     for (let i = 0; i < state.grid.length; i++) {
-       for (let j = 0; j < state.grid[i].length; j++) {
-         const box = document.getElementById(`box${i}${j}`);
-         box.textContent = state.grid[i][j];
-       }
+        for (let j = 0; j < state.grid[i].length; j++) {
+            const box = document.getElementById(`box${i}${j}`);
+            box.textContent = state.grid[i][j];
+        }
     }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -145,7 +147,7 @@ function drawBox(container, row, col, letter = '') {
     box.style.zIndex = '100';
     box.textContent = letter;
     box.id = `box${row}${col}`;
-    
+
     container.appendChild(box);
     return box;
 }
@@ -154,29 +156,29 @@ function drawBox(container, row, col, letter = '') {
 
 function registerKeyboardEvents() {
     document.body.onkeydown = (e) => {
-      const key = e.key;
-      if (key === 'Enter') {
-        if (state.currentCol === 5) {
-          const word = getCurrentWord();
-          console.log('word:', word);
-          if (isWordValid(word)) {
-            revealWord(word);
-            state.currentRow++;
-            state.currentCol = 0;
-            //document.getElementById('textBox').value = '';
-          } else {
-            alert('Sorry, This is not a valid word or in the current Dictonary.');
-          }
+        const key = e.key;
+        if (key === 'Enter') {
+            if (state.currentCol === 5) {
+                const word = getCurrentWord();
+                console.log('word:', word);
+                if (isWordValid(word)) {
+                    revealWord(word);
+                    state.currentRow++;
+                    state.currentCol = 0;
+                    //document.getElementById('textBox').value = '';
+                } else {
+                    alert('Sorry, This is not a valid word or in the current Dictonary.');
+                }
+            }
         }
-      }
-      if (key === 'Backspace') {
-        removeLetter();
-      }
-      if (isLetter(key)) {
-          addLetter(key.toLowerCase());
-      }
-  
-      updateGrid();
+        if (key === 'Backspace') {
+            removeLetter();
+        }
+        if (isLetter(key)) {
+            addLetter(key.toLowerCase());
+        }
+
+        updateGrid();
     };
 }
 
@@ -197,7 +199,7 @@ function stopRegisterKeyboardEvents() {
 function getCurrentWord() {
     return state.grid[state.currentRow].reduce((prev, curr) => prev + curr);
 }
-  
+
 /**
  * Checks if a given word is valid by verifying its presence in the dictionary.
  *
@@ -221,13 +223,13 @@ function isWordValid(word) {
 function getNumOfOccurrencesInWord(word, letter) {
     let result = 0;
     for (let i = 0; i < word.length; i++) {
-      if (word[i] === letter) {
-        result++;
-      }
+        if (word[i] === letter) {
+            result++;
+        }
     }
     return result;
 }
-  
+
 
 /**
  * Gets the number of occurrences of a specific letter in a word up to a given position.
@@ -241,9 +243,9 @@ function getNumOfOccurrencesInWord(word, letter) {
 function getPositionOfOccurrence(word, letter, position) {
     let result = 0;
     for (let i = 0; i <= position; i++) {
-      if (word[i] === letter) {
-        result++;
-      }
+        if (word[i] === letter) {
+            result++;
+        }
     }
     return result;
 }
@@ -254,61 +256,65 @@ function getPositionOfOccurrence(word, letter, position) {
 function revealWord(guess) {
     const row = state.currentRow;
     const animation_duration = 500; // ms
-  
+
     for (let i = 0; i < 5; i++) {
-      const box = document.getElementById(`box${row}${i}`);
-      const letter = box.textContent;
-      const numOfOccurrencesSecret = getNumOfOccurrencesInWord(
-        state.secret,
-        letter
-      );
-      const numOfOccurrencesGuess = getNumOfOccurrencesInWord(guess, letter);
-      const letterPosition = getPositionOfOccurrence(guess, letter, i);
-  
-      setTimeout(() => {
-        if (
-          numOfOccurrencesGuess > numOfOccurrencesSecret &&
-          letterPosition > numOfOccurrencesSecret
-        ) {
-          box.classList.add('empty');
-        } else {
-          if (letter === state.secret[i]) {
-            box.classList.add('right');
-          } else if (state.secret.includes(letter)) {
-            box.classList.add('wrong');
-          } else {
-            box.classList.add('empty');
-          }
-        }
-      }, ((i + 1) * animation_duration) / 2);
-  
-      box.classList.add('animated');
-      box.style.animationDelay = `${(i * animation_duration) / 2}ms`;
+        const box = document.getElementById(`box${row}${i}`);
+        const letter = box.textContent;
+        const numOfOccurrencesSecret = getNumOfOccurrencesInWord(
+            state.secret,
+            letter
+        );
+        const numOfOccurrencesGuess = getNumOfOccurrencesInWord(guess, letter);
+        const letterPosition = getPositionOfOccurrence(guess, letter, i);
+
+        setTimeout(() => {
+            if (
+                numOfOccurrencesGuess > numOfOccurrencesSecret &&
+                letterPosition > numOfOccurrencesSecret
+            ) {
+                box.classList.add('empty');
+            } else {
+                if (letter === state.secret[i]) {
+                    box.classList.add('right');
+                } else if (state.secret.includes(letter)) {
+                    box.classList.add('wrong');
+                } else {
+                    box.classList.add('empty');
+                }
+            }
+        }, ((i + 1) * animation_duration) / 2);
+
+        box.classList.add('animated');
+        box.style.animationDelay = `${(i * animation_duration) / 2}ms`;
     }
-  
+
     const isWinner = state.secret === guess;
     const isGameOver = state.currentRow === (difficulty === 'easy' ? 5 : 4);
-  
+
     setTimeout(() => {
-      if (isWinner) {
-        congratulations();
-        drawReplayButton();
-        stopRegisterKeyboardEvents();
-      } else if (isGameOver) {
-        console.log('Game over Loser');
-  
-        const outcome = document.createElement('div');
-        outcome.id = 'outcome';
-        document.getElementById('title').append(outcome);
-  
-        const header = document.createElement('h3');
-        header.innerHTML = `Better luck next time!<br>The word was ${state.secret.charAt(0).toUpperCase() + state.secret.slice(1)}.`;
-        header.className = 'header3';
-        outcome.appendChild(header);
-  
-        stopRegisterKeyboardEvents();
-        drawReplayButton();
-      }
+        if (isWinner) {
+            congratulations();
+            drawReplayButton();
+            stopRegisterKeyboardEvents();
+        } else if (isGameOver) {
+            console.log('Game over Loser');
+
+            const outcome = document.createElement('div');
+            outcome.id = 'outcome';
+            const aboveGrid = document.getElementById('aboveGrid');
+            aboveGrid.insertBefore(outcome, aboveGrid.firstChild);
+
+            const header = document.createElement('h3');
+            header.innerHTML = `Better luck next time!<br>The word was ${state.secret.charAt(0).toUpperCase() + state.secret.slice(1)}.`;
+            header.className = 'header3';
+            outcome.appendChild(header);
+
+            stopRegisterKeyboardEvents();
+            drawReplayButton();
+
+            // disable giveUpButton button
+            document.getElementById('giveUpButton').disabled = true;
+        }
     }, 3 * animation_duration);
 }
 
@@ -331,8 +337,8 @@ function addLetter(letter) {
     state.grid[state.currentRow][state.currentCol] = letter;
     state.currentCol++;
 }
-  
-  
+
+
 // Remove letter from Square
 function removeLetter() {
     if (state.currentCol === 0) return;
@@ -347,9 +353,146 @@ function removeLetter() {
 function startup() {
     const aboveGrid = document.getElementById('aboveGrid');
     drawGrid(aboveGrid);
-    //drawHintButton();
+    drawHintButton();
     registerKeyboardEvents();
     console.log('Game Started');
 }
-  
+
 startup();
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Hint Button
+function drawHintButton() {
+    console.log('Hint');
+
+    // create Hint button div before hr
+    const drawhintButtonDiv = document.createElement('div');
+    drawhintButtonDiv.className = "mt-3 d-flex justify-content-center border-top";
+    drawhintButtonDiv.id = 'drawhintButtonDiv';
+    document.getElementById('giveUpButtonDiv').prepend(drawhintButtonDiv);
+
+    // decrease margin top of hr from style.css
+    const hr = document.getElementById('giveUpButtonDiv');
+    hr.style.marginTop = '20px';
+    
+    // create Hint button
+    const button = document.createElement('button');
+    button.textContent = 'Hint';
+    button.className = 'btn btn-sm btn-danger mt-3';
+    button.id = 'hintButton';
+    button.onclick = hintButtonPressed;
+    drawhintButtonDiv.appendChild(button);
+
+    // scroll to 0, 130
+    window.scrollTo(0, 130);
+
+}
+
+function hintButtonPressed() {
+    const hintdiv = document.createElement('div');
+    hintdiv.id = 'hintdiv';
+    console.log('Hint Button Pressed');
+    document.getElementById('guessInputDiv').append(hintdiv);
+    console.log("TESTING");
+
+    const hinttext = document.createElement('h5');
+    hinttext.innerHTML = `The First Letter Is ${state.secret.charAt(0).toUpperCase()}`;
+    hinttext.className = 'header';
+    hintdiv.appendChild(hinttext);
+    document.getElementById('hintButton').disabled = true;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Congratulations Button
+
+function congratulations() {
+
+    // create outcome div
+    const outcome = document.createElement('div');
+    outcome.style.marginTop = '-30px';
+    outcome.id = 'outcome';
+    const aboveGrid = document.getElementById('aboveGrid');
+    aboveGrid.insertBefore(outcome, aboveGrid.firstChild);
+
+    console.log(state.currentRow);
+
+    // create outcomeheader
+    const outcomeheader = document.createElement('h1');
+    if (state.currentRow === 1) {
+        outcomeheader.innerHTML = `Congratulations! You Found the Word in ${state.currentRow} Try!`;
+    } else {
+        outcomeheader.innerHTML = `Well Done! You Found the Word in ${state.currentRow} Tries!`;
+    }
+    outcomeheader.className = 'header';
+    outcome.appendChild(outcomeheader);
+
+    // disable giveUpButton button
+    document.getElementById('giveUpButton').disabled = true;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Replay Button
+
+function drawReplayButton() {
+    console.log('Replay');
+
+    // create replay button div before hr
+    const drawReplayButtonDiv = document.createElement('div');
+    drawReplayButtonDiv.className = 'btn btn-sm btn-danger mt-3';
+    drawReplayButtonDiv.id = 'drawReplayButtonDiv';
+    document.getElementById('giveUpButtonDiv').append(drawReplayButtonDiv);
+
+    // decrease margin top of hr from style.css
+    const hr = document.getElementById('giveUpButtonDiv');
+    hr.style.marginTop = '20px';
+
+    // create replay button
+    const button = document.createElement('button');
+    button.textContent = 'Replay';
+    button.className = 'btn btn-sm btn-danger mt-3';
+    button.onclick = replayButtonPressed;
+    drawReplayButtonDiv.appendChild(button);
+
+    // disable hint button
+    document.getElementById('hintButton').disabled = true;
+
+    // scroll to 0, 130
+    window.scrollTo(0, 130);
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Replay Button Pressed
+// replay button pressed reload
+function replayButtonPressed() {
+    window.location.reload();
+}
+
+// prevent scrolling on refresh
+window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
+};
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Give Up Button
+
+document.getElementById('giveUpButton').onclick = () => {
+  console.log('Give Up Button Pressed');
+  console.log('Game over Loser');
+
+  const outcome = document.createElement('div');
+  outcome.id = 'outcome';
+  const aboveGrid = document.getElementById('aboveGrid');
+  aboveGrid.insertBefore(outcome, aboveGrid.firstChild);
+
+  const header = document.createElement('h3');
+  header.innerHTML = `Better luck next time!<br>The word was ${state.secret.charAt(0).toUpperCase() + state.secret.slice(1)}.`;
+  header.className = 'header3';
+  outcome.appendChild(header);
+
+  stopRegisterKeyboardEvents();
+  drawReplayButton();
+
+  // disable giveUpButton button
+  document.getElementById('giveUpButton').disabled = true;
+};
