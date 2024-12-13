@@ -33,38 +33,40 @@
         <section class="text-center mb-4">
             <h2 class="tagline">EMBRACE THE CHALLENGE. REVEAL THE MYSTERY.</h2>
         </section>
-        <section class="d-flex flex-row flex-wrap align-items-center justify-content-center" style="width: 100%; max-width: 800px;">
+        <section class="d-flex flex-column align-items-center justify-content-center" style="width: 100%; max-width: 800px;">
+            <div class="d-flex flex-row flex-wrap align-items-center justify-content-center mb-3">
+                <!-- Rules Button -->
+                <button class="btn btn-primary mx-2 my-2" data-toggle="modal" data-target="#rulesModal">RULES</button>
+                <!-- Difficulty Dropdown -->
+                <div class="dropdown mx-2 my-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown"
+                        data-toggle="dropdown" aria-expanded="false">
+                        DIFFICULTY
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
+                        <li><a class="dropdown-item" href="#">Easy</a></li>
+                        <li><a class="dropdown-item" href="#">Hard</a></li>
+                    </ul>
+                </div>
+                <!-- Themes Dropdown -->
+                <div class="dropdown mx-2 my-2">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown"
+                        aria-expanded="false">
+                        THEMES
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="themesDropdown">
+                        <li><a class="dropdown-item" href="#">Christmas</a></li>
+                        <li><a class="dropdown-item" href="#">Tech</a></li>
+                        <li><a class="dropdown-item" href="#">Food</a></li>
+                        <li><a class="dropdown-item" href="#">Geography</a></li>
+                        <li><a class="dropdown-item" href="#">Movies</a></li>
+                    </ul>
+                </div>
+            </div>
             <!-- Play Button -->
-            <a href="path/to/game" class="btn btn-warning mx-2 my-2 play-button">
+            <a href="path/to/game" class="btn play-button">
                 <i class="fas fa-play"></i> PLAY
             </a>
-            <!-- Rules Button -->
-            <button class="btn btn-primary mx-2 my-2" data-toggle="modal" data-target="#rulesModal">RULES</button>
-            <!-- Difficulty Dropdown -->
-            <div class="dropdown mx-2 my-2">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown"
-                    data-toggle="dropdown" aria-expanded="false">
-                    DIFFICULTY
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
-                    <li><a class="dropdown-item" href="#">Easy</a></li>
-                    <li><a class="dropdown-item" href="#">Hard</a></li>
-                </ul>
-            </div>
-            <!-- Themes Dropdown -->
-            <div class="dropdown mx-2 my-2">
-                <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown"
-                    aria-expanded="false">
-                    THEMES
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="themesDropdown">
-                    <li><a class="dropdown-item" href="#">Christmas</a></li>
-                    <li><a class="dropdown-item" href="#">Tech</a></li>
-                    <li><a class="dropdown-item" href="#">Food</a></li>
-                    <li><a class="dropdown-item" href="#">Geography</a></li>
-                    <li><a class="dropdown-item" href="#">Movies</a></li>
-                </ul>
-            </div>
         </section>
     </main>
     <footer class="text-center mt-auto">

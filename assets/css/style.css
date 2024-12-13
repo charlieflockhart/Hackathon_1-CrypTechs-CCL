@@ -73,8 +73,8 @@ button, .play-button {
     box-shadow: none; /* Ensures no default box-shadow */
     border: none; /* Removes any default borders */
     font-family: 'Press Start 2P', cursive; /* Apply the font */
-    background-color: rgba(0, 0, 0, 0.7); /* Match opacity to header and footer */
-    color: #fff;
+    background-color: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Match opacity to header and footer */
+    color: antiquewhite; /* Match text color to header */
     text-align: center;
     display: inline-flex;
     align-items: center;
@@ -92,37 +92,37 @@ button:hover, .play-button:hover {
 
 button.btn-primary, .play-button {
     background-color: rgba(0, 0, 0, 0.7); /* Match opacity to header and footer */
-    color: #fff;
+    color: antiquewhite; /* Match text color to header */
     border: none; /* Ensures no borders on buttons */
 }
 
 button.btn-primary:hover, button.btn-primary:focus, .play-button:hover, .play-button:focus {
     background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
-    color: #fff;
+    color: antiquewhite; /* Match text color to header */
     border: none;
 }
 
 button.btn-secondary {
     background-color: rgba(0, 0, 0, 0.7); /* Match opacity to header and footer */
-    color: #fff;
+    color: antiquewhite; /* Match text color to header */
     border: none;
 }
 
 button.btn-secondary:hover, button.btn-secondary:focus {
     background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
-    color: #fff;
+    color: antiquewhite; /* Match text color to header */
     border: none;
 }
 
 button.btn-success {
     background-color: rgba(0, 0, 0, 0.7); /* Match opacity to header and footer */
-    color: #fff;
+    color: antiquewhite; /* Match text color to header */
     border: none;
 }
 
 button.btn-success:hover, button.btn-success:focus {
     background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
-    color: #fff;
+    color: antiquewhite; /* Match text color to header */
     border: none;
 }
 
