@@ -1,0 +1,39 @@
+/* Global fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Press+Start+2P&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+.game-title {
+    color: #FAEBD7;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+.cell-width{
+    width: calc((100% / 5) - 0.25rem);
+    height: 50px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+    border: 1px solid #000;
+    font-size: 1.5em;
+}
+
+/* Duplicates */
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
