@@ -1,24 +1,43 @@
 /* Global fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Press+Start+2P&display=swap');
 
-html, body {
-  margin: 0;
-  padding: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+:root {
+    --default: #121213;
+    --christmas: #b22222;
+    --empty: #3a3a3c;
+    --wrong: #b59f3b;
+    --right: #538d4e;
 }
 
+/*Header*/
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
 
+/*Header Title*/
 .game-title {
     color: #FAEBD7;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-family: 'Press Start 2P', cursive;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
 
-.cell-width{
+
+
+
+.cell-width {
     width: calc((100% / 5) - 0.25rem);
     height: 50px;
     text-align: center;
@@ -30,10 +49,78 @@ html, body {
 
 /* Duplicates */
 
-header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+
+
+/* GAME */
+
+#game {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: start;
+    margin-top: 2rem;
+    width: 100%;
+    height: 72vh;
 }
 
+.grid {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
+}
+
+.box {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--empty);
+    margin: 4px;
+    color: var(--default);
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    
+}
+
+.box.empty {
+    background: var(--empty);
+}
+
+.box.wrong {
+    background: var(--wrong);
+}
+
+.box.right {
+    background: var(--right);
+}
+
+.animated {
+    animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.hintButton {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+
+.replayButton {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
