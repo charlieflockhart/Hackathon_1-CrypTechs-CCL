@@ -1,0 +1,165 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/workspace/Hackathon_1-CrypTechs-CCL/assets/images/backgroundimage1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff; /* Set all text to white */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shading effect */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: antiquewhite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for effect */
+    font-family: 'Press Start 2P', cursive; /* Apply the font */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.text-center h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: antiquewhite;
+}
+
+section.text-center h2.tagline {
+    font-size: 2em;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shading effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for effect */
+    font-family: 'Press Start 2P', cursive; /* Apply the font */
+}
+
+button {
+    width: 200px;
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    outline: none;
+    box-shadow: none; /* Ensures no default box-shadow */
+    border: none; /* Removes any default borders */
+}
+
+button:focus, button:active {
+    outline: none !important; /* Removes the focus outline */
+    box-shadow: none !important; /* Removes focus shadow */
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button.btn-primary {
+    background-color: grey;
+    color: #fff;
+    border: none; /* Ensures no borders on buttons */
+}
+
+button.btn-primary:hover, button.btn-primary:focus {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+}
+
+button.btn-secondary {
+    background-color: grey;
+    color: #fff;
+    border: none;
+}
+
+button.btn-secondary:hover, button.btn-secondary:focus {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+}
+
+button.btn-success {
+    background-color: grey;
+    color: #fff;
+    border: none;
+}
+
+button.btn-success:hover, button.btn-success:focus {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background for better contrast */
+    color: black /* Ensure text is white */
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.modal-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.modal-body h6 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.modal-body p, .modal-body ul {
+    font-size: 1em;
+    color: black; /* Ensure text is white */
+}
+
+.modal-body ul {
+    padding-left: 20px;
+}
+
+.modal-body ul ul {
+    padding-left: 20px;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for dropdown */
+    color: #fff; /* White text for dropdown items */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown-item {
+    color: #fff; /* White text for dropdown items */
+    padding: 10px 20px; /* Padding for dropdown items */
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #343a40; /* Darker background on hover */
+    color: #fff; /* Ensure text remains white */
+    border-radius: 5px; /* Rounded corners on hover */
+}
