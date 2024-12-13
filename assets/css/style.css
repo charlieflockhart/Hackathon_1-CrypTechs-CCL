@@ -1,3 +1,87 @@
-body {
-    background-color: red;
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url('assets/images/background1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.text-center h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+button.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+button.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+button.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+button.btn-success:hover {
+    background-color: #218838;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #fff;
 }
