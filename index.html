@@ -44,27 +44,26 @@
                         DIFFICULTY
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
-                        <li><a class="dropdown-item" href="#">Easy</a></li>
-                        <li><a class="dropdown-item" href="#">Hard</a></li>
+                        <li><a id="easy-dropdown-button" class="dropdown-item" href="#">Easy</a></li>
+                        <li><a id="hard-dropdown-button" class="dropdown-item" href="#">Hard</a></li>
                     </ul>
                 </div>
                 <!-- Themes Dropdown -->
                 <div class="dropdown mx-2 my-2">
-                    <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown"
-                        aria-expanded="false">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown" aria-expanded="true">
                         THEMES
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="themesDropdown">
-                        <li><a class="dropdown-item" href="#">Christmas</a></li>
-                        <li><a class="dropdown-item" href="#">Tech</a></li>
-                        <li><a class="dropdown-item" href="#">Food</a></li>
-                        <li><a class="dropdown-item" href="#">Geography</a></li>
-                        <li><a class="dropdown-item" href="#">Movies</a></li>
+                        <li><a id="christmas-dropdown-button" class="dropdown-item" href="#">Christmas</a></li>
+                        <li><a id="tech-dropdown-button" class="dropdown-item" href="#">Tech</a></li>
+                        <li><a id="food-dropdown-button" class="dropdown-item" href="#">Food</a></li>
+                        <li><a id="geography-dropdown-button" class="dropdown-item" href="#">Geography</a></li>
+                        <li><a id="movies-dropdown-button" class="dropdown-item" href="#">Movies</a></li>
                     </ul>
                 </div>
             </div>
             <!-- Play Button -->
-            <a href="path/to/game" class="btn play-button">
+            <a href="game.html" id="playButton" class="btn play-button">
                 <i class="fas fa-play"></i> PLAY
             </a>
         </section>
@@ -113,8 +112,9 @@
         </div>
     </div>
 
+    <script src="assets/js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
