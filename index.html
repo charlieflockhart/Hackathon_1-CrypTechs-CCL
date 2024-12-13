@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url('assets/images/background1.jpg');
+            background-image: url('assets/images/backgroundimage1.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -16,6 +17,11 @@
             color: white;
         }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -24,14 +30,15 @@
     </header>
     <main class="d-flex flex-column align-items-center justify-content-center" style="height: 80vh;">
         <section class="text-center mb-4">
-            <h2>EMBRACE THE CHALLENGE. REVEAL THE MYSTERY.</h2>
+            <h2 class="tagline">EMBRACE THE CHALLENGE. REVEAL THE MYSTERY.</h2>
         </section>
-        <section class="d-flex flex-column align-items-center justify-content-between" style="height: 200px;">
+        <section class="d-flex flex-column align-items-center justify-content-between" style="height: 300px;">
             <!-- Rules Button -->
-            <button class="btn btn-primary" data-toggle="modal" data-target="#rulesModal">RULES</button>
+            <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#rulesModal">RULES</button>
             <!-- Difficulty Dropdown -->
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown" data-toggle="dropdown" aria-expanded="false">
+            <div class="dropdown mb-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown"
+                    data-toggle="dropdown" aria-expanded="false">
                     DIFFICULTY
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
@@ -40,8 +47,9 @@
                 </ul>
             </div>
             <!-- Themes Dropdown -->
-            <div class="dropdown mt-3">
-                <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown" aria-expanded="false">
+            <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown"
+                    aria-expanded="false">
                     THEMES
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="themesDropdown">
@@ -102,4 +110,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
