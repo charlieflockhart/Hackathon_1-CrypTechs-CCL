@@ -20,23 +20,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Press+Start+2P&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <h1 class="text-center mt-4">CRYP-TECHS</h1>
+    <header class="container-fluid">
+        <h1 class="text-center mt-4 display-4">CRYP-TECHS</h1>
     </header>
     <main class="d-flex flex-column align-items-center justify-content-center" style="height: 80vh;">
         <section class="text-center mb-4">
             <h2 class="tagline">EMBRACE THE CHALLENGE. REVEAL THE MYSTERY.</h2>
         </section>
-        <section class="d-flex flex-column align-items-center justify-content-between" style="height: 300px;">
+        <section class="d-flex flex-row flex-wrap align-items-center justify-content-center" style="width: 100%; max-width: 800px;">
+            <!-- Play Button -->
+            <a href="path/to/game" class="btn btn-warning mx-2 my-2 play-button">
+                <i class="fas fa-play"></i> PLAY
+            </a>
             <!-- Rules Button -->
-            <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#rulesModal">RULES</button>
+            <button class="btn btn-primary mx-2 my-2" data-toggle="modal" data-target="#rulesModal">RULES</button>
             <!-- Difficulty Dropdown -->
-            <div class="dropdown mb-3">
+            <div class="dropdown mx-2 my-2">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown"
                     data-toggle="dropdown" aria-expanded="false">
                     DIFFICULTY
@@ -47,7 +52,7 @@
                 </ul>
             </div>
             <!-- Themes Dropdown -->
-            <div class="dropdown">
+            <div class="dropdown mx-2 my-2">
                 <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown"
                     aria-expanded="false">
                     THEMES
