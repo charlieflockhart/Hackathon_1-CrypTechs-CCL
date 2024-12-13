@@ -7,15 +7,13 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: 'Arial', sans-serif;
-    color: #fff;
+   
 }
 
 header {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #fff;
 }
 
 header h1 {
@@ -83,5 +81,4 @@ footer {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     text-align: center;
-    border-top: 2px solid #fff;
 }
