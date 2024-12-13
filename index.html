@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,113 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url('assets/images/background1.jpg');
+            background-image: url('assets/images/backgroundimage1.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
+            color: white;
         }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <h1>CRYP-TECHS</h1>
+    <header class="container-fluid">
+        <h1 class="text-center mt-4 display-4">CRYP-TECHS</h1>
     </header>
-    <main class="d-flex flex-column align-items-center justify-content-center">
+    <main class="d-flex flex-column align-items-center justify-content-center" style="height: 80vh;">
         <section class="text-center mb-4">
-            <h2>Embrace the challenge. Reveal the mystery.</h2>
+            <h2 class="tagline">EMBRACE THE CHALLENGE. REVEAL THE MYSTERY.</h2>
         </section>
-        <section class="d-flex flex-column align-items-center justify-content-between" style="height: 200px;">
-            <button class="btn btn-primary">Rules</button>
-            <button class="btn btn-secondary">Difficulty</button>
-            <button class="btn btn-success">Themes</button>
+        <section class="d-flex flex-column align-items-center justify-content-center" style="width: 100%; max-width: 800px;">
+            <div class="d-flex flex-row flex-wrap align-items-center justify-content-center mb-3">
+                <!-- Rules Button -->
+                <button class="btn btn-primary mx-2 my-2" data-toggle="modal" data-target="#rulesModal">RULES</button>
+                <!-- Difficulty Dropdown -->
+                <div class="dropdown mx-2 my-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown"
+                        data-toggle="dropdown" aria-expanded="false">
+                        DIFFICULTY
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
+                        <li><a class="dropdown-item" href="#">Easy</a></li>
+                        <li><a class="dropdown-item" href="#">Hard</a></li>
+                    </ul>
+                </div>
+                <!-- Themes Dropdown -->
+                <div class="dropdown mx-2 my-2">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown"
+                        aria-expanded="false">
+                        THEMES
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="themesDropdown">
+                        <li><a class="dropdown-item" href="#">Christmas</a></li>
+                        <li><a class="dropdown-item" href="#">Tech</a></li>
+                        <li><a class="dropdown-item" href="#">Food</a></li>
+                        <li><a class="dropdown-item" href="#">Geography</a></li>
+                        <li><a class="dropdown-item" href="#">Movies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Play Button -->
+            <a href="path/to/game" class="btn play-button">
+                <i class="fas fa-play"></i> PLAY
+            </a>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 CRYP-TECHS. All rights reserved.</p>
+    <footer class="text-center mt-auto">
+        <p>&copy; 2024 CCL. All rights reserved.</p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+
+    <!-- Rules Modal -->
+    <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rulesModalLabel">Game Rules</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6><strong>Objective:</strong></h6>
+                    <p>Guess the 5-letter mystery word within 6 attempts.</p>
+                    
+                    <h6><strong>Gameplay:</strong></h6>
+                    <ul>
+                        <li><strong>Start a New Game:</strong> Click the "New Game" button to begin.</li>
+                        <li><strong>Input Guess:</strong> Type your 5-letter guess into the input box and press "Submit."</li>
+                        <li><strong>Feedback:</strong> After each guess, the game provides feedback:</li>
+                        <ul>
+                            <li><strong>Green:</strong> Correct letter in the correct position.</li>
+                            <li><strong>Yellow:</strong> Correct letter in the wrong position.</li>
+                            <li><strong>Gray:</strong> Incorrect letter.</li>
+                        </ul>
+                        <li><strong>Attempts:</strong> You have 6 attempts to guess the correct word.</li>
+                    </ul>
+                    
+                    <h6><strong>Themes:</strong></h6>
+                    <p>Choose different themes like Christmas, food, tech, etc., for a variety of word lists.</p>
+                    
+                    <h6><strong>Difficulty Levels:</strong></h6>
+                    <p>Adjust the difficulty settings to make the game more challenging.</p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
