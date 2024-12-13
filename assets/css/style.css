@@ -129,3 +129,22 @@ footer {
 .modal-body ul ul {
     padding-left: 20px;
 }
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: rgba(3, 3, 3, 0.8); /* Dark background for dropdown */
+    color: #fff; /* White text for dropdown items */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown-item {
+    color: #fff; /* White text for dropdown items */
+    padding: 10px 20px; /* Padding for dropdown items */
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #343a40; /* Darker background on hover */
+    color: black;/* Ensure text remains white */
+    border-radius: 5px; /* Rounded corners on hover */
+}

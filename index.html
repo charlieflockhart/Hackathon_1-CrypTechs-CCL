@@ -15,8 +15,6 @@
             background-attachment: fixed;
             color: white;
         }
-
-    
     </style>
 </head>
 
@@ -31,12 +29,31 @@
         <section class="d-flex flex-column align-items-center justify-content-between" style="height: 200px;">
             <!-- Rules Button -->
             <button class="btn btn-primary" data-toggle="modal" data-target="#rulesModal">RULES</button>
-            <button class="btn btn-secondary">DIFFICULTY</button>
-            <button class="btn btn-success">THEMES</button>
+            <!-- Difficulty Dropdown -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown" data-toggle="dropdown" aria-expanded="false">
+                    DIFFICULTY
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
+                    <li><a class="dropdown-item" href="#">Easy</a></li>
+                    <li><a class="dropdown-item" href="#">Hard</a></li>
+                </ul>
+            </div>
+            <!-- Themes Dropdown -->
+            <div class="dropdown mt-3">
+                <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown" aria-expanded="false">
+                    THEMES
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="themesDropdown">
+                    <li><a class="dropdown-item" href="#">Christmas</a></li>
+                    <li><a class="dropdown-item" href="#">Tech</a></li>
+                    <li><a class="dropdown-item" href="#">Food</a></li>
+                    <li><a class="dropdown-item" href="#">Geography</a></li>
+                    <li><a class="dropdown-item" href="#">Movies</a></li>
+                </ul>
+            </div>
         </section>
     </main>
-
-    <!-- Footer -->
     <footer class="text-center mt-auto">
         <p>&copy; 2024 CRYP-TECHS. All rights reserved.</p>
     </footer>
@@ -81,8 +98,8 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
