@@ -26,6 +26,12 @@ header h1 {
     font-family: 'Press Start 2P', cursive; /* Apply the font */
 }
 
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+}
+
 main {
     flex: 1;
     display: flex;
@@ -51,7 +57,13 @@ section.text-center h2.tagline {
     font-family: 'Press Start 2P', cursive; /* Apply the font */
 }
 
-button {
+@media (max-width: 768px) {
+    section.text-center h2.tagline {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+}
+
+button, .play-button {
     width: 200px;
     padding: 15px;
     font-size: 1.2em;
@@ -60,50 +72,54 @@ button {
     outline: none;
     box-shadow: none; /* Ensures no default box-shadow */
     border: none; /* Removes any default borders */
+    font-family: 'Press Start 2P', cursive; /* Apply the font */
+    background-color: rgba(0, 0, 0, 0.7); /* Match opacity to header and footer */
+    color: antiquewhite; /* Match text color to header */
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-button:focus, button:active {
+button:focus, button:active, .play-button:focus, .play-button:active {
     outline: none !important; /* Removes the focus outline */
     box-shadow: none !important; /* Removes focus shadow */
 }
 
-button:hover {
+button:hover, .play-button:hover {
     transform: scale(1.1);
 }
 
-button.btn-primary {
-    background-color: grey;
-    color: #fff;
+button.btn-primary, .play-button {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Match opacity to header and footer */
+    color: antiquewhite !important; /* Match text color to header */
     border: none; /* Ensures no borders on buttons */
-}
-
-button.btn-primary:hover, button.btn-primary:focus {
-    background-color: #343a40;
-    color: #fff;
-    border: none;
+    font-family: 'Press Start 2P', cursive; 
 }
 
 button.btn-secondary {
-    background-color: grey;
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7); /* Match opacity to header and footer */
+    color: antiquewhite; /* Match text color to header */
     border: none;
+    font-family: 'Press Start 2P', cursive; 
 }
 
 button.btn-secondary:hover, button.btn-secondary:focus {
-    background-color: #343a40;
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+    color: antiquewhite; /* Match text color to header */
     border: none;
 }
 
 button.btn-success {
-    background-color: grey;
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7); /* Match opacity to header and footer */
+    color: antiquewhite; /* Match text color to header */
     border: none;
+    font-family: 'Press Start 2P', cursive; 
 }
 
 button.btn-success:hover, button.btn-success:focus {
-    background-color: #343a40;
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+    color: antiquewhite; /* Match text color to header */
     border: none;
 }
 
@@ -111,11 +127,12 @@ footer {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .modal-content {
     background-color: rgba(0, 0, 0, 0.9); /* Darker background for better contrast */
-    color: black /* Ensure text is white */
+    color: black; /* Ensure text is white */
 }
 
 .modal-header, .modal-footer {

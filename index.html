@@ -7,6 +7,7 @@
     <title>CRYP-TECHS</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/workspace/Hackathon_1-CrypTechs-CCL/assets/images/favicon.png" type="image/png">
     <style>
         body {
             background-image: url('assets/images/backgroundimage1.jpg');
@@ -20,50 +21,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Press+Start+2P&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <h1 class="text-center mt-4">CRYP-TECHS</h1>
+    <header class="container-fluid">
+        <h1 class="text-center mt-4 display-4">CRYP-TECHS</h1>
     </header>
     <main class="d-flex flex-column align-items-center justify-content-center" style="height: 80vh;">
         <section class="text-center mb-4">
             <h2 class="tagline">EMBRACE THE CHALLENGE. REVEAL THE MYSTERY.</h2>
         </section>
-        <section class="d-flex flex-column align-items-center justify-content-between" style="height: 300px;">
-            <!-- Rules Button -->
-            <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#rulesModal">RULES</button>
-            <!-- Difficulty Dropdown -->
-            <div class="dropdown mb-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown"
-                    data-toggle="dropdown" aria-expanded="false">
-                    DIFFICULTY
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
-                    <li><a class="dropdown-item" href="#">Easy</a></li>
-                    <li><a class="dropdown-item" href="#">Hard</a></li>
-                </ul>
+        <section class="d-flex flex-column align-items-center justify-content-center" style="width: 100%; max-width: 800px;">
+            <div class="d-flex flex-row flex-wrap align-items-center justify-content-center mb-3">
+                <!-- Rules Button -->
+                <button class="btn btn-primary mx-2 my-2" data-toggle="modal" data-target="#rulesModal">RULES</button>
+                <!-- Difficulty Dropdown -->
+                <div class="dropdown mx-2 my-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown"
+                        data-toggle="dropdown" aria-expanded="false">
+                        DIFFICULTY
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
+                        <li><a id="easy-dropdown-button" class="dropdown-item" href="#">Easy</a></li>
+                        <li><a id="hard-dropdown-button" class="dropdown-item" href="#">Hard</a></li>
+                    </ul>
+                </div>
+                <!-- Themes Dropdown -->
+                <div class="dropdown mx-2 my-2">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown" aria-expanded="true">
+                        THEMES
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="themesDropdown">
+                        <li><a id="christmas-dropdown-button" class="dropdown-item" href="#">Christmas</a></li>
+                        <li><a id="tech-dropdown-button" class="dropdown-item" href="#">Tech</a></li>
+                        <li><a id="food-dropdown-button" class="dropdown-item" href="#">Food</a></li>
+                        <li><a id="geography-dropdown-button" class="dropdown-item" href="#">Geography</a></li>
+                        <li><a id="movies-dropdown-button" class="dropdown-item" href="#">Movies</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- Themes Dropdown -->
-            <div class="dropdown">
-                <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown"
-                    aria-expanded="false">
-                    THEMES
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="themesDropdown">
-                    <li><a class="dropdown-item" href="#">Christmas</a></li>
-                    <li><a class="dropdown-item" href="#">Tech</a></li>
-                    <li><a class="dropdown-item" href="#">Food</a></li>
-                    <li><a class="dropdown-item" href="#">Geography</a></li>
-                    <li><a class="dropdown-item" href="#">Movies</a></li>
-                </ul>
-            </div>
+            <!-- Play Button -->
+            <a href="game.html" id="playButton" class="btn play-button">
+                <i class="fas fa-play"></i> PLAY
+            </a>
         </section>
     </main>
     <footer class="text-center mt-auto">
-        <p>&copy; 2024 CRYP-TECHS. All rights reserved.</p>
+        <p>&copy; 2024 CCL. All rights reserved.</p>
     </footer>
 
     <!-- Rules Modal -->
@@ -99,15 +106,17 @@
                     <h6><strong>Difficulty Levels:</strong></h6>
                     <p>Adjust the difficulty settings to make the game more challenging.</p>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer d-flex justify-content-center">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="assets/js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
