@@ -1,6 +1,6 @@
 export const testDictionary = [
     "tests",
-]
+];
 
 export const testDictionary2 = [
     "tests",
@@ -8,7 +8,7 @@ export const testDictionary2 = [
     "plane",
     "crane",
     "audio"
-]
+];
 
 export const christmasDictionary = [
     "angel",
@@ -95,7 +95,7 @@ export const christmasDictionary = [
     "ropes",
     "flake",
     "sheep",
-]
+];
 
 export const movieDictionary = [
     "movie",
@@ -176,7 +176,7 @@ export const movieDictionary = [
     "silly",
     "touch",
     "acted",
-]
+];
 
 export const foodDictionary = [
     "apple",
@@ -264,7 +264,7 @@ export const foodDictionary = [
     "clove",
     "scent",
     "spice",
-]
+];
 
 export const technologyDictionary = [
     "mouse",
@@ -355,7 +355,7 @@ export const technologyDictionary = [
     "loads",
     "speed",
     "track",
-]
+];
 
 export const geographyDictionary = [
     "hills",
@@ -461,4 +461,4 @@ export const geographyDictionary = [
     "rocks",
     "mount",
     "sleet",
-]
+];
