@@ -57,13 +57,78 @@ We wanted to add an element to the game for those looking to challenge themselve
 ![Responsivity Image](assets/images/responsivity.png)
 
 ## UX Design
-Details about the user experience design.
+USER EXPERIENCE
+
+TARGET AUDIENCE: 
+Gamers, puzzlers, anyone who enjoys brain-teasers and brain-training activities and people wanting to improve their English vocabulary.
+
+USER STORIES: 
+
+USER STORY 1: ACCESSIBLE DESIGN 
+As a visually impaired user: i want the game to follow accessibility guidelines so that i can use a screen reader and navigate the game easily. 
+
+ACCEPTANCE CRITERIA:
+All interactive elements are accessible via keyboard. 
+The game provides text alternatives for visual content. 
+No WCAG errors in the implementation. 
+
+
+USER STORY 2: RESPONSIVE LAYOUT 
+As a player using various devices, i want the game to adapt to different screen sizes. So that i can have a consistent experience on desktop tablet and mobile. 
+
+ACCEPTANCE CRITERIA: 
+Use CSS media queries, Flexbox, or Grid.
+Ensure no major errors/loss of functionality across devices.
+
+
+USER STORY 3: USER-FRIENDLY INTERFACE
+As a casual gamer, i want an intuitive and visually appealing interface so that i can easily navigate the game. 
+I want each theme within the game to maintain its own unique identity, while also ensuring that the overall interface of the entire webpage remains cohesive and visually harmonious. This balance will enhance the user experience, allowing players to fully immerse themselves in the game, regardless of the theme they choose. Achieving this consistency will make the game more enjoyable and engaging for everyone.
+
+ACCEPTANCE CRITERIA:
+Consistent styles and clear navigation.
+Adherence to wireframes/mockups.
+
+
+USER STORY 4: INTERACTIVE GAMEPLAY 
+As a player,
+I want dynamic updates and feedback during gameplay,
+so that I can understand my progress and improve my guesses
+.
+ACCEPTANCE CRITERIA:
+JavaScript updates the interface in real-time based on user input.
+Effective DOM manipulation of at least two elements.
+
+
+USER STORY 5: FUNCTIONAL NAVIGATION 
+As a user,
+I want intuitive and functional navigation,
+so that I can easily move through different sections of the game.
+
+ACCEPTANCE CRITERIA: 
+Semantic HTML markup for structure.
+CSS media queries maintain layout integrity across screen sizes.
+
+## Agile Methodology 
+
+A project board was set up and the project divided into user stories. 
+MosCoW prioritisation was used to prioritise the importance of tasks. 
+The project board was used to organise sprints for time management and to keep track of tasks.
+The project board can be found here (https://github.com/users/charlieflockhart/projects/5/views/1)
+
+![Agile methodology] (/assets/images/projectboard.png)
+
 
 ## Design
-Details about the design of the project.
+
+Our design for Cryp-Techs emphasizes accessibility, simplicity, consistency and responsiveness to ensure a seamless and engaging user experience. 
+Our aim was to create a sleek, user-friendly website that maintains a cohesive and visually appealing aesthetic. 
+The choice of font, the background imagery, and the game’s name all play into the cryptic and mysterious essence of the game, enhancing the overall immersive experience for our players.
+
+![Wireframes Image] (/assets/image/wireframe.png)
 
 ## Website Features
-List and description of the website features.
+
 
 ## Tablet/Mobile View
 Information and images about the tablet and mobile view.
