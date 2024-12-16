@@ -56,7 +56,6 @@ We wanted to add an element to the game for those looking to challenge themselve
 ## Responsivity
 ![Responsivity Image](assets/images/responsivity.png)
 
-
 ## UX Design
 Details about the user experience design.
 
