@@ -14,7 +14,7 @@ let dictionary = testDictionary;
 
 console.log('selected dictionary', dictionary);
 
-// ------- SET THEME BG IMAGE -------//
+// ------- SET THEME BG IMAGE -------// - LINDA
 if (theme === 'christmas') {
     dictionary = christmasDictionary;
     document.body.style.backgroundImage = "url('./assets/images/themes/christmas.png')";
@@ -378,7 +378,7 @@ function drawHintButton() {
     
     // create Hint button
     const button = document.createElement('button');
-    button.textContent = 'Hint';
+    button.textContent = 'HINT';
     button.className = 'btn btn-sm btn-danger mt-3';
     button.id = 'hintButton';
     button.onclick = hintButtonPressed;
