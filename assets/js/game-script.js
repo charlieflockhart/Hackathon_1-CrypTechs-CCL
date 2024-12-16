@@ -43,6 +43,56 @@ if (difficulty === 'hard') {
     console.log('Hard mode selected');
 }
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Timer only on
+let timer;
+let timeLeft = 2; // 3 minutes in seconds
+
+function startTimer() {
+  const timerElement = document.createElement('div');
+  timerElement.id = 'timer';
+  timerElement.style.fontSize = '20px';
+  timerElement.style.marginTop = '10px';
+  document.getElementById('header').append(timerElement);
+
+  updateTimerDisplay();
+
+  timer = setInterval(() => {
+    timeLeft--;
+    updateTimerDisplay();
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      
+      const outcome = document.createElement('div');
+      outcome.id = 'outcome';
+      document.getElementById('header').append(outcome);
+
+      const header = document.createElement('h3');
+      header.innerHTML = `You Ran Out Of Time! <br> The word was ${state.secret.charAt(0).toUpperCase() + state.secret.slice(1)}. <br> Try Again!`;
+      header.className = 'header3';
+      outcome.appendChild(header);
+
+      stopRegisterKeyboardEvents();
+      drawReplayButton();
+
+      // disable giveUpButton button
+        document.getElementById('giveUpButton').disabled = true;
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay() {
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
+  const timerElement = document.getElementById('timer');
+  timerElement.textContent = `Time left: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
+if (difficulty === 'hard') {
+  startTimer();
+}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
@@ -65,7 +115,7 @@ const state = {
     currentCol: 0,
 };
 
-console.log('Secret:', state.secret);
+console.log('ANSWER FOR DEMO PURPOSE:', state.secret);
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -449,7 +499,7 @@ function drawReplayButton() {
 
     // create replay button
     const button = document.createElement('button');
-    button.textContent = 'Replay';
+    button.textContent = 'REPLAY';
     button.className = 'btn btn-sm btn-danger mt-3';
     button.onclick = replayButtonPressed;
     drawReplayButtonDiv.appendChild(button);
