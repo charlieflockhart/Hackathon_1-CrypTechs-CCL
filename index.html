@@ -46,11 +46,11 @@
                         THEMES
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="themesDropdown">
-                        <li><a class="dropdown-item" href="#" onclick="setTheme('Christmas')">CHRISTMAS</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="setTheme('Tech')">TECH</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="setTheme('Food')">FOOD</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="setTheme('Geography')">GEOGRAPHY</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="setTheme('Movies')">MOVIES</a></li>
+                        <li><a class="dropdown-item"  onclick="setTheme('christmas')">CHRISTMAS</a></li>
+                        <li><a class="dropdown-item"  onclick="setTheme('tech')">TECH</a></li>
+                        <li><a class="dropdown-item"  onclick="setTheme('food')">FOOD</a></li>
+                        <li><a class="dropdown-item" onclick="setTheme('geography')">GEOGRAPHY</a></li>
+                        <li><a class="dropdown-item"  onclick="setTheme('movies')">MOVIES</a></li>
                     </ul>
                 </div>
                 
@@ -61,8 +61,8 @@
                         DIFFICULTY
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
-                        <li><a class="dropdown-item" href="#" onclick="setDifficulty('Easy')">EASY</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="setDifficulty('Hard')">HARD</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setDifficulty('easy')">EASY</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setDifficulty('hard')">HARD</a></li>
                     </ul>
                 </div>
             </div>
@@ -116,18 +116,17 @@
         </div>
     </div>
 
-    <script src="assets/js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         function setDifficulty(difficulty) {
-            document.getElementById('difficultyDropdown').innerText = difficulty;
+            localStorage.setItem('difficulty', difficulty);
         }
 
         function setTheme(theme) {
-            document.getElementById('themesDropdown').innerText = theme;
+            localStorage.setItem('theme', theme);
         }
     </script>
 </body>
