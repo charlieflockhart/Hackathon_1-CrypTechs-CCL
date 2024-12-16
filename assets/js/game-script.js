@@ -1,4 +1,6 @@
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Dictionary Import
+import { testDictionary, testDictionary2, christmasDictionary, movieDictionary, foodDictionary, technologyDictionary, geographyDictionary } from './dictionary.js';
+
 //Get theme and difficulty from local storage / Cache
 let theme = localStorage.getItem('theme');
 let difficulty = localStorage.getItem('difficulty');
@@ -6,36 +8,32 @@ let difficulty = localStorage.getItem('difficulty');
 //grab theme and difficulty from cache and console log
 console.log('Theme:', theme);
 console.log('Difficulty:', difficulty);
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Dictionary Import
-import { testDictionary, testDictionary2, christmasDictionary, movieDictionary, foodDictionary, technologyDictionary, geographyDictionary } from './dictionary.js';
-console.log('test dictionary:', testDictionary);
-console.log('test dictionary2:', testDictionary2);
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// default test dictionary
+let dictionary = testDictionary; 
 
+console.log('selected dictionary', dictionary);
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Theme
-
-
+// ------- SET THEME BG IMAGE -------//
 if (theme === 'christmas') {
-    console.log('Christmas theme selected');
-}
-if (theme === 'movies') {
-    console.log('Movie theme selected');
-}
-if (theme === 'food') {
-    console.log('Food theme selected');
-}
-if (theme === 'tech') {
-    console.log('Technolgy theme selected');
-}
-if (theme === 'geography') {
-    console.log('Geography theme selected');
+    dictionary = christmasDictionary;
+    document.body.style.backgroundImage = "url('./assets/images/themes/christmas.png')";
+}else if (theme === 'movies') {
+    dictionary = movieDictionary;
+    document.body.style.backgroundImage = "url('./assets/images/themes/movie.png')";
+} else if (theme === 'food') {
+    dictionary = foodDictionary;
+    document.body.style.backgroundImage = "url('./assets/images/themes/food.png')";
+} else if (theme === 'tech') {
+    dictionary = technologyDictionary;
+    document.body.style.backgroundImage = "url('./assets/images/themes/tech.png')";
+} else if (theme === 'geography') {
+    dictionary = geographyDictionary;
+    document.body.style.backgroundImage = "url('./assets/images/themes/geography.png')";
+} else {
+    dictionary = testDictionary2;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Difficulty
 
 if (difficulty === 'easy') {
@@ -57,7 +55,7 @@ if (difficulty === 'hard') {
  * @property {number} state.currentCol - The index of the current column the player is on.
  */
 
-const dictionary = testDictionary2;
+
 const state = {
     secret: dictionary[Math.floor(Math.random() * dictionary.length)],
     grid: Array(difficulty === 'easy' ? 6 : 5)
@@ -66,6 +64,9 @@ const state = {
     currentRow: 0,
     currentCol: 0,
 };
+
+console.log('Secret:', state.secret);
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Draw the grid called will either call easyGrid or hardGrid depending on the difficulty selected
