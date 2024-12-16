@@ -197,11 +197,15 @@ footer {
 
 h3 {
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.5em;
+    font-size: 0.5em;
     color: #FAEBD7;
     text-align: center;
     margin-top: 1rem;
     padding-top: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 #timer {

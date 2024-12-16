@@ -469,8 +469,8 @@ function congratulations() {
     const outcome = document.createElement('div');
     outcome.style.marginTop = '-30px';
     outcome.id = 'outcome';
-    const headerdiv = document.getElementById('header');
-    headerdiv.insertBefore(outcome, header.Child);
+    const headerdiv = document.getElementById('aboveGrid');
+    headerdiv.insertBefore(outcome, aboveGrid.firstChild);
 
     console.log(state.currentRow);
 
