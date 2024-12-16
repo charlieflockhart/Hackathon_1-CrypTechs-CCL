@@ -7,10 +7,8 @@
 - [UX Design](#ux-design)
 - [Design](#design)
 - [Website Features](#website-features)
-- [Tablet/Mobile View](#tablet-mobile-view)
 - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
-- [Deployment](#deployment)
 - [Testing](#testing)
 - [Credits](#credits)
 
@@ -116,7 +114,7 @@ MosCoW prioritisation was used to prioritise the importance of tasks.
 The project board was used to organise sprints for time management and to keep track of tasks.
 The project board can be found here (https://github.com/users/charlieflockhart/projects/5/views/1)
 
-![Agile methodology] (/assets/images/projectboard.png)
+![Agile Methodology](assets/images/projectboard.png)
 
 
 ## Design
@@ -124,28 +122,51 @@ The project board can be found here (https://github.com/users/charlieflockhart/p
 Our design for Cryp-Techs emphasizes accessibility, simplicity, consistency and responsiveness to ensure a seamless and engaging user experience. 
 Our aim was to create a sleek, user-friendly website that maintains a cohesive and visually appealing aesthetic. 
 The choice of font, the background imagery, and the game’s name all play into the cryptic and mysterious essence of the game, enhancing the overall immersive experience for our players.
+The color scheme for the homepage was centered around the 'cryptic, encrypt, and cryptex' theme. 
+For each individual theme of the game, we added a corresponding background image. 
 
-![Wireframes Image] (/assets/image/wireframe.png)
+![Wireframe Image](assets/images/wireframes.png)
 
 ## Website Features
 
+HOMEPAGE 
+- The main homepage is intended to be the centre of navigation for users to choose their game. 
+- We included a modal to outline the rules of the game and how to use the site. 
+- Dropdown menus for theme and difficulty level. 
+- A play button to enter the chosen game. 
 
-## Tablet/Mobile View
-Information and images about the tablet and mobile view.
+GAME PAGE 
+- Grid to enter guesses. 
+- Hint button provides users with a clue on the next letter. 
+- Give up button ends the game and reveals the answers. 
+- Green tile for when a letter is inserted in the correct place. 
+- Yellow tile for when a correct letter is inserted but in the incorrect place. 
+- Grey tile - incorrect letter. 
+- Congratulations message when word guessed in two tries. 
+- Well done message when word guessed in more than two tries. 
+- Exit button that takes user back to homepage. 
+- Corresponding background image to the theme chosen. 
+- Snow falling animation on christmas theme. 
+
 
 ## Future Features
 Planned features for future development.
+- Seasonal themes for specific holidays e.g. a pancake day theme, halloween, valentines day.
+- We would have liked to add an audio element for the themes i.e. christmas music, Gordan Ramsey yelling audio for the food page. 
 
 ## Technologies Used
-- Technology 1
-- Technology 2
-- Technology 3
-
-## Deployment
-Steps and information about the deployment process.
+- HTML
+- CSS
+- JavaScript
 
 ## Testing
-Details about the testing process and results.
+![Testing Image](assets/images/testing.png)
+![Testing Image](assets/images/testing2.png)
 
 ## Credits
 Acknowledgements and credits for contributors and resources.
+- COPILOT 
+- FAVICON GENERATOR 
+- PEXELS - homepage background image link (https://www.pexels.com/photo/close-up-photo-of-matrix-background-1089438/)
+- STORYSET - game pages images link (https://storyset.com/)
+- YOUTUBE - Wordle JavaScript code inspiration (https://www.youtube.com/watch?v=oKM2nQdQkIU)
