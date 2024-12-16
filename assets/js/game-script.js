@@ -499,7 +499,7 @@ function drawReplayButton() {
 
     // create replay button
     const button = document.createElement('button');
-    button.textContent = 'Replay';
+    button.textContent = 'REPLAY';
     button.className = 'btn btn-sm btn-danger mt-3';
     button.onclick = replayButtonPressed;
     drawReplayButtonDiv.appendChild(button);
