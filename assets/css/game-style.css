@@ -219,3 +219,19 @@ h3 {
 .mt-3 {
     margin-top: 0rem !important;
 }
+
+#hintdiv {
+    font-family: 'Press Start 2P', cursive;
+    color: #FAEBD7;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h5 {
+    font-size: 1rem !important;    
+}

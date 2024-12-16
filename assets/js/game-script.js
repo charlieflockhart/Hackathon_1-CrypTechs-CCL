@@ -451,7 +451,7 @@ function hintButtonPressed() {
     const hintdiv = document.createElement('div');
     hintdiv.id = 'hintdiv';
     console.log('Hint Button Pressed');
-    document.getElementById('guessInputDiv').append(hintdiv);
+    document.getElementById('aboveGrid').appendChild(hintdiv);
 
     const hinttext = document.createElement('h5');
     hinttext.innerHTML = `The First Letter Is ${state.secret.charAt(0).toUpperCase()}`;
