@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Default First Load Of Page
 
-defaultTheme = 'christmas';
-defaultDifficulty = 'easy';
+let defaultTheme = 'christmas';
+let defaultDifficulty = 'easy';
 console.log("Default Theme", defaultTheme);
 console.log("Default Difficulty", defaultDifficulty);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,31 +54,31 @@ document.getElementById('geography-dropdown-button').onclick = () => {
 
 if (window.location.search.includes('theme=christmas')) {
     theme = 'christmas';
-    themeUppercase = theme.toUpperCase();
+    let themeUppercase = theme.toUpperCase();
     document.getElementById('themesDropdown').innerText = themeUppercase;
 }
 
 if (window.location.search.includes('theme=movies')) {
     theme = 'movies';
-    themeUppercase = theme.toUpperCase();
+    let themeUppercase = theme.toUpperCase();
     document.getElementById('themesDropdown').innerText = themeUppercase;
 }
 
 if (window.location.search.includes('theme=food')) {
     theme = 'food';
-    themeUppercase = theme.toUpperCase();
+    let themeUppercase = theme.toUpperCase();
     document.getElementById('themesDropdown').innerText = themeUppercase;
 }
 
 if (window.location.search.includes('theme=tech')) {
     theme = 'tech';
-    themeUppercase = theme.toUpperCase();
+    let themeUppercase = theme.toUpperCase();
     document.getElementById('themesDropdown').innerText = themeUppercase;
 }
 
 if (window.location.search.includes('theme=geography')) {
     theme = 'geography';
-    themeUppercase = theme.toUpperCase();
+    let themeUppercase = theme.toUpperCase();
     document.getElementById('themesDropdown').innerText = themeUppercase;
 }
 
@@ -97,13 +97,13 @@ document.getElementById('hard-dropdown-button').onclick = () => {
   
 if (window.location.search.includes('difficulty=hard')) {
     difficulty = 'hard';
-    difficultyUppercase = difficulty.toUpperCase();
+    let difficultyUppercase = difficulty.toUpperCase();
     document.getElementById('difficultyDropdown').innerText = difficultyUppercase;
 }
   
 if (window.location.search.includes('difficulty=easy')) {
     difficulty = 'easy';
-    difficultyUppercase = difficulty.toUpperCase();
+    let difficultyUppercase = difficulty.toUpperCase();
     document.getElementById('difficultyDropdown').innerText = difficultyUppercase;
 }
 
