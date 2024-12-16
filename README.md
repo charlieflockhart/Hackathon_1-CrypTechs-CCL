@@ -7,10 +7,8 @@
 - [UX Design](#ux-design)
 - [Design](#design)
 - [Website Features](#website-features)
-- [Tablet/Mobile View](#tablet-mobile-view)
 - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
-- [Deployment](#deployment)
 - [Testing](#testing)
 - [Credits](#credits)
 
@@ -151,24 +149,24 @@ GAME PAGE
 - Snow falling animation on christmas theme. 
 
 
-## Tablet/Mobile View
-Information and images about the tablet and mobile view.
-
 ## Future Features
 Planned features for future development.
 - Seasonal themes for specific holidays e.g. a pancake day theme, halloween, valentines day.
 - We would have liked to add an audio element for the themes i.e. christmas music, Gordan Ramsey yelling audio for the food page. 
 
 ## Technologies Used
-- Technology 1
-- Technology 2
-- Technology 3
-
-## Deployment
-Steps and information about the deployment process.
+- HTML
+- CSS
+- JavaScript
 
 ## Testing
-Details about the testing process and results.
+![Testing Image](assets/images/testing.png)
+![Testing Image](assets/images/testing2.png)
 
 ## Credits
 Acknowledgements and credits for contributors and resources.
+- COPILOT 
+- FAVICON GENERATOR 
+- PEXELS - homepage background image link (https://www.pexels.com/photo/close-up-photo-of-matrix-background-1089438/)
+- STORYSET - game pages images link (https://storyset.com/)
+- YOUTUBE - Wordle JavaScript code inspiration (https://www.youtube.com/watch?v=oKM2nQdQkIU)
