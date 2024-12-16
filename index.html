@@ -10,7 +10,7 @@
     <link rel="icon" href="/assets/images/favicon.png" type="image/png">
     <style>
         body {
-            background-image: url('assets/images/backgroundimage1.jpg');
+            background-image: url('./assets/images/backgroundimage1.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -28,7 +28,7 @@
 
 <body>
     <header class="container-fluid">
-        <h1 class="text-center mt-4 display-4">CRYP-TECHS</h1>
+        <h1 id=themeName class="game-title fs-1 fs-md-2 fs-lg-3">CRYP-TECHS</h1>
     </header>
     <main class="d-flex flex-column align-items-center justify-content-center" style="height: 80vh;">
         <section class="text-center mb-4">
@@ -61,14 +61,27 @@
                         DIFFICULTY
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
-                        <li><a class="dropdown-item" href="#" onclick="setDifficulty('Easy')">EASY</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="setDifficulty('Hard')">HARD</a></li>
+                        <li><a id="easy-dropdown-button" class="dropdown-item" href="#">Easy</a></li>
+                        <li><a id="hard-dropdown-button" class="dropdown-item" href="#">Hard</a></li>
                     </ul>
                 </div>
-                
+                <!-- Themes Dropdown -->
+                <div class="dropdown mx-2 my-2">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown"
+                        aria-expanded="false">
+                        THEMES
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="themesDropdown">
+                        <li><a class="dropdown-item" href="#">Christmas</a></li>
+                        <li><a class="dropdown-item" href="#">Tech</a></li>
+                        <li><a class="dropdown-item" href="#">Food</a></li>
+                        <li><a class="dropdown-item" href="#">Geography</a></li>
+                        <li><a class="dropdown-item" href="#">Movies</a></li>
+                    </ul>
+                </div>
             </div>
             <!-- Play Button -->
-            <a href="path/to/game" class="btn play-button">
+            <a href="game.html" id="playButton" class="btn play-button">
                 <i class="fas fa-play"></i> PLAY
             </a>
         </section>
@@ -117,6 +130,7 @@
         </div>
     </div>
 
+    <script src="assets/js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
