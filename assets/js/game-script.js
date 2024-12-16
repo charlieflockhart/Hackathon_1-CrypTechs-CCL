@@ -76,6 +76,9 @@ function startTimer() {
 
       stopRegisterKeyboardEvents();
       drawReplayButton();
+
+      // disable giveUpButton button
+        document.getElementById('giveUpButton').disabled = true;
     }
   }, 1000);
 }
