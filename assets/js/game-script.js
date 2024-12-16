@@ -47,7 +47,7 @@ if (difficulty === 'hard') {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Timer only on
 let timer;
-let timeLeft = 2; // 3 minutes in seconds
+let timeLeft = 180; // 3 minutes in seconds
 
 function startTimer() {
   const timerElement = document.createElement('div');
@@ -115,7 +115,8 @@ const state = {
     currentCol: 0,
 };
 
-console.log('Secret:', state.secret);
+//Uncomment to show current secret
+//console.log('Secret:', state.secret);
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -350,15 +351,21 @@ function revealWord(guess) {
         } else if (isGameOver) {
             console.log('Game over Loser');
 
-            const outcome = document.createElement('div');
-            outcome.id = 'outcome';
-            const aboveGrid = document.getElementById('aboveGrid');
-            aboveGrid.insertBefore(outcome, aboveGrid.firstChild);
+            // const outcome = document.createElement('div');
+            // outcome.id = 'outcome';
+            // const headerdiv = document.getElementById('header');
+            // headerdiv.insertBefore(outcome, header.Child);
 
-            const header = document.createElement('h3');
-            header.innerHTML = `Better luck next time!<br>The word was ${state.secret.charAt(0).toUpperCase() + state.secret.slice(1)}.`;
-            header.className = 'header3';
-            outcome.appendChild(header);
+            const outcome = document.createElement('div');
+            outcome.style.marginTop = '-30px';
+            outcome.id = 'outcome';
+            const headerdiv = document.getElementById('header');
+            headerdiv.insertBefore(outcome, header.Child);
+
+            const headerNew = document.createElement('h3');
+            headerNew.innerHTML = `Better luck next time!<br>The word was ${state.secret.charAt(0).toUpperCase() + state.secret.slice(1)}.`;
+            headerNew.className = 'header3';
+            outcome.appendChild(headerNew);
 
             stopRegisterKeyboardEvents();
             drawReplayButton();
@@ -444,7 +451,6 @@ function hintButtonPressed() {
     hintdiv.id = 'hintdiv';
     console.log('Hint Button Pressed');
     document.getElementById('guessInputDiv').append(hintdiv);
-    console.log("TESTING");
 
     const hinttext = document.createElement('h5');
     hinttext.innerHTML = `The First Letter Is ${state.secret.charAt(0).toUpperCase()}`;
@@ -462,13 +468,13 @@ function congratulations() {
     const outcome = document.createElement('div');
     outcome.style.marginTop = '-30px';
     outcome.id = 'outcome';
-    const aboveGrid = document.getElementById('aboveGrid');
-    aboveGrid.insertBefore(outcome, aboveGrid.firstChild);
+    const headerdiv = document.getElementById('header');
+    headerdiv.insertBefore(outcome, header.Child);
 
     console.log(state.currentRow);
 
     // create outcomeheader
-    const outcomeheader = document.createElement('h1');
+    const outcomeheader = document.createElement('h3');
     if (state.currentRow === 1) {
         outcomeheader.innerHTML = `Congratulations! You Found the Word in ${state.currentRow} Try!`;
     } else {
