@@ -38,17 +38,7 @@
             <div class="d-flex flex-row flex-wrap align-items-center justify-content-center mb-3">
                 <!-- Rules Button -->
                 <button class="btn btn-primary mx-2 my-2" data-toggle="modal" data-target="#rulesModal">RULES</button>
-                <!-- Difficulty Dropdown -->
-                <div class="dropdown mx-2 my-2">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown"
-                        data-toggle="dropdown" aria-expanded="false">
-                        DIFFICULTY
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
-                        <li><a class="dropdown-item" href="#">Easy</a></li>
-                        <li><a class="dropdown-item" href="#">Hard</a></li>
-                    </ul>
-                </div>
+                
                 <!-- Themes Dropdown -->
                 <div class="dropdown mx-2 my-2">
                     <button class="btn btn-success dropdown-toggle" type="button" id="themesDropdown" data-toggle="dropdown"
@@ -56,13 +46,26 @@
                         THEMES
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="themesDropdown">
-                        <li><a class="dropdown-item" href="#">Christmas</a></li>
-                        <li><a class="dropdown-item" href="#">Tech</a></li>
-                        <li><a class="dropdown-item" href="#">Food</a></li>
-                        <li><a class="dropdown-item" href="#">Geography</a></li>
-                        <li><a class="dropdown-item" href="#">Movies</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setTheme('Christmas')">CHRISTMAS</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setTheme('Tech')">TECH</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setTheme('Food')">FOOD</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setTheme('Geography')">GEOGRAPHY</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setTheme('Movies')">MOVIES</a></li>
                     </ul>
                 </div>
+                
+                <!-- Difficulty Dropdown -->
+                <div class="dropdown mx-2 my-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="difficultyDropdown"
+                        data-toggle="dropdown" aria-expanded="false">
+                        DIFFICULTY
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="difficultyDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="setDifficulty('Easy')">EASY</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="setDifficulty('Hard')">HARD</a></li>
+                    </ul>
+                </div>
+                
             </div>
             <!-- Play Button -->
             <a href="path/to/game" class="btn play-button">
@@ -118,6 +121,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <script>
+        function setDifficulty(difficulty) {
+            document.getElementById('difficultyDropdown').innerText = difficulty;
+        }
 
+        function setTheme(theme) {
+            document.getElementById('themesDropdown').innerText = theme;
+        }
+    </script>
+</body>
 </html>
