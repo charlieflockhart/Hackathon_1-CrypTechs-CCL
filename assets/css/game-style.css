@@ -183,3 +183,30 @@ footer {
         visibility: hidden;
      }
 }
+
+
+
+
+
+
+
+
+h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    color: #FAEBD7;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#timer {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    color: #FAEBD7;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.mt-3 {
+    margin-top: 0rem !important;
+}
