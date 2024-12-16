@@ -451,7 +451,7 @@ function hintButtonPressed() {
     const hintdiv = document.createElement('div');
     hintdiv.id = 'hintdiv';
     console.log('Hint Button Pressed');
-    document.getElementById('guessInputDiv').append(hintdiv);
+    document.getElementById('aboveGrid').appendChild(hintdiv);
 
     const hinttext = document.createElement('h5');
     hinttext.innerHTML = `The First Letter Is ${state.secret.charAt(0).toUpperCase()}`;
@@ -469,8 +469,8 @@ function congratulations() {
     const outcome = document.createElement('div');
     outcome.style.marginTop = '-30px';
     outcome.id = 'outcome';
-    const headerdiv = document.getElementById('header');
-    headerdiv.insertBefore(outcome, header.Child);
+    const headerdiv = document.getElementById('aboveGrid');
+    headerdiv.insertBefore(outcome, aboveGrid.firstChild);
 
     console.log(state.currentRow);
 
